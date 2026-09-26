@@ -65,6 +65,10 @@ const staticFiles = new Map([
   ["/roomify/script.js", ["script.js", "text/javascript"]],
 ]);
 
+if (process.env.ROOMIFY_DB_DIAGNOSTIC === "1") {
+  const userCount = db.prepare("SELECT COUNT(*) AS count FROM users").get();
+  console.log(`ROOMIFY DATABASE USERS: ${userCount.count}`);
+}
 const server = createServer(async (req, res) => {
   res.setHeader("X-Content-Type-Options", "nosniff");
   res.setHeader("X-Frame-Options", "DENY");
