@@ -22,6 +22,7 @@ const publicOrigin = process.env.PUBLIC_ORIGIN
   ? new URL(process.env.PUBLIC_ORIGIN).origin
   : null;
 const dummyHash = await hashPassword("timing-placeholder-not-an-account");
+
 function json(res, status, value) {
   res.writeHead(status, { "Content-Type": "application/json; charset=utf-8" });
   res.end(JSON.stringify(value));
