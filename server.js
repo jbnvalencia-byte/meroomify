@@ -69,6 +69,28 @@ if (process.env.ROOMIFY_DB_DIAGNOSTIC === "1") {
   const userCount = db.prepare("SELECT COUNT(*) AS count FROM users").get();
   console.log(`ROOMIFY DATABASE USERS: ${userCount.count}`);
 }
+
+if (process.env.ROOMIFY_CREATE_ADMIN === "1") {
+  const adminEmail = process.env.ROOMIFY_ADMIN_EMAIL;
+  const adminPassword = process.env.ROOMIFY_ADMIN_PASSWORD;
+  const adminName = process.env.ROOMIFY_ADMIN_NAME || "Roomify Admin";
+
+  const existing = db
+    .prepare("SELECT id FROM users WHERE email=?")
+    .get(adminEmail);
+
+  if (!existing) {
+    const hash = await hashPassword(adminPassword);
+
+    db.prepare(
+      "INSERT INTO users (name,email,password,role) VALUES (?,?,?,'admin')",
+    ).run(adminName, adminEmail, hash);
+
+    console.log(`ADMIN CREATED: ${adminEmail}`);
+  } else {
+    console.log(`ADMIN ALREADY EXISTS: ${adminEmail}`);
+  }
+}
 const server = createServer(async (req, res) => {
   res.setHeader("X-Content-Type-Options", "nosniff");
   res.setHeader("X-Frame-Options", "DENY");
