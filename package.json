@@ -1,0 +1,16 @@
+{
+  "name": "roomify",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Roomify rental system with a Node.js server and SQLite database",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "admin": "node manage.js admin",
+    "seed": "node manage.js seed",
+    "test": "node --test test/system.test.js"
+  }
+}

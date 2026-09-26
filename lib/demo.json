@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "title": "The Linden Studio",
+    "type": "Apartment",
+    "city": "Calamba, Laguna",
+    "price": 8500,
+    "beds": "1 bedroom",
+    "bath": "1 bath",
+    "amenities": ["Wi-Fi", "Air conditioning", "Kitchen", "Parking"],
+    "photo": "photo-1522708323590-d24dbb6b0267",
+    "tag": "Featured",
+    "owner": "Andrea"
+  },
+  {
+    "id": 2,
+    "title": "Maria’s Boarding House",
+    "type": "Boarding house",
+    "city": "Calamba, Laguna",
+    "price": 3500,
+    "beds": "1 bed space",
+    "bath": "Shared bath",
+    "amenities": ["Wi-Fi", "Kitchen", "Laundry"],
+    "photo": "photo-1505693416388-ac5ce068fe85",
+    "tag": "Student-friendly",
+    "owner": "Maria"
+  },
+  {
+    "id": 3,
+    "title": "A cozy corner in Los Baños",
+    "type": "Room for rent",
+    "city": "Los Baños, Laguna",
+    "price": 5000,
+    "beds": "1 bedroom",
+    "bath": "1 bath",
+    "amenities": ["Wi-Fi", "Air conditioning", "Kitchen"],
+    "photo": "photo-1611892440504-42a792e24d32",
+    "tag": "New listing",
+    "owner": "Luis"
+  },
+  {
+    "id": 4,
+    "title": "The Solana Residences",
+    "type": "Apartment",
+    "city": "Santa Rosa, Laguna",
+    "price": 12000,
+    "beds": "2 bedrooms",
+    "bath": "1 bath",
+    "amenities": ["Wi-Fi", "Parking", "Kitchen", "Pet friendly"],
+    "photo": "photo-1600210492486-724fe5c67fb0",
+    "tag": "Featured",
+    "owner": "Camille"
+  },
+  {
+    "id": 5,
+    "title": "The Study Nook",
+    "type": "Bed spacer",
+    "city": "Los Baños, Laguna",
+    "price": 2800,
+    "beds": "1 bed space",
+    "bath": "Shared bath",
+    "amenities": ["Wi-Fi", "Laundry", "Kitchen"],
+    "photo": "photo-1540518614846-7eded433c457",
+    "tag": "Student-friendly",
+    "owner": "Rina"
+  },
+  {
+    "id": 6,
+    "title": "Garden View Guesthouse",
+    "type": "Other spaces",
+    "city": "San Pablo, Laguna",
+    "price": 6500,
+    "beds": "1 bedroom",
+    "bath": "1 bath",
+    "amenities": ["Wi-Fi", "Parking", "Pet friendly", "Kitchen"],
+    "photo": "photo-1616486338812-3dadae4b4ace",
+    "tag": "New listing",
+    "owner": "Paolo"
+  }
+]
